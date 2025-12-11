@@ -351,6 +351,49 @@ input[type="date"] {
     height: 20px;
     margin-right: 6px;
 }
+/* 🔧 Correction responsive smartphone */
+@media (max-width: 480px) {
+    .input-style,
+    select,
+    input[type="date"],
+    textarea {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .section-block {
+        padding: 15px !important;
+    }
+
+    .transport-card {
+        min-width: 100% !important;
+    }
+
+    .type-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .type-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .agency-info-horizontal {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .agency-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Grids avion: 2 colonnes → 1 colonne */
+    #avionFields div[style*="grid"] {
+        display: block !important;
+    }
+}
 
 </style>
 
@@ -1391,3 +1434,4 @@ function classifyPassengers(compagnie, datesNaissance, dateAller, dateRetour, is
 
 </body>
 </html>
+
