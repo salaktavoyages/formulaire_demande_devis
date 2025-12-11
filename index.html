@@ -351,47 +351,73 @@ input[type="date"] {
     height: 20px;
     margin-right: 6px;
 }
-/* 🔧 Correction responsive smartphone */
+/* 📱 Correction responsive pour smartphone */
 @media (max-width: 480px) {
+
+    /* Empêcher les inputs de dépasser */
     .input-style,
     select,
     input[type="date"],
     textarea {
-        max-width: 100% !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 14px !important; /* Réduit le padding de l’icône */
     }
 
+    /* Réduire l'icône des dates pour mobile */
+    input[type="date"] {
+        background-size: 16px !important;
+        background-position: 8px center !important;
+        padding-left: 34px !important;
+    }
+
+    /* Corriger les select avec icônes */
+    .select-icon,
+    .select-icon-maritime,
+    .select-icon-depart,
+    .select-icon-arrivee {
+        background-size: 16px !important;
+        background-position: 8px center !important;
+        padding-left: 34px !important;
+    }
+
+    /* Containers */
     .section-block {
         padding: 15px !important;
     }
 
-    .transport-card {
-        min-width: 100% !important;
-    }
-
+    /* Les 3 boutons type (Aller simple / Retour...) */
     .type-buttons {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-direction: column !important;
+        gap: 12px !important;
     }
-
     .type-btn {
-        width: 100%;
+        width: 100% !important;
         justify-content: center;
     }
 
+    /* Grilles avion → passer en une seule colonne */
+    #avionFields div[style*="grid-template-columns"] {
+        display: block !important;
+    }
+
+    /* Transport cards */
+    .transport-card {
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Bloc des infos agence */
     .agency-info-horizontal {
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 10px;
     }
 
     .agency-item {
-        width: 100%;
+        width: 100% !important;
         justify-content: center;
-    }
-
-    /* Grids avion: 2 colonnes → 1 colonne */
-    #avionFields div[style*="grid"] {
-        display: block !important;
     }
 }
 
@@ -1434,4 +1460,5 @@ function classifyPassengers(compagnie, datesNaissance, dateAller, dateRetour, is
 
 </body>
 </html>
+
 
