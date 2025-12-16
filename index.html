@@ -574,9 +574,9 @@ input[type="date"] {
     <div id="cabinTypeSection" class="section-block" style="display:none;">
         <h2 class="section-title">2. Type de Cabine / Classe</h2>
 
-        <div id="cabinBateauFields" style="display:none;">
+        <div id="cabinBateauFields" name="cabinBateauFields" style="display:none;">
             <label>Type de cabine (Bateau)</label>
-            <select id="typeCabineBateau" class="input-style"></select>
+            <select id="typeCabineBateau" name="typeCabineBateau" class="input-style"></select>
         </div>
 
         <div id="cabinAvionFields" style="display:none;"> <label>Classe (Avion)</label> <select id="typeClasseAvion" name="typeClasseAvion" class="input-style"> <option value="">-- Choisir Une Class --/option> <option value="Economique">Économique</option> <option value="Affaires">Affaires</option> <option value="Premiere">Première</option> </select> </div>
@@ -1500,6 +1500,7 @@ function classifyPassengers(compagnie, datesNaissance, dateAller, dateRetour, is
 
 </body>
 </html>
+
 
 
 
